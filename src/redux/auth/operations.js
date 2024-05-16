@@ -2,16 +2,20 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 axios.defaults.baseURL = "https://connections-api.herokuapp.com";
-
+export const setAuthTok = (token) => {
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+};
 export const register = createAsyncThunk(
   "auth/register",
   async (user, thunkAPI) => {
     try {
       const response = await axios.post("/users/signup", user);
-      axios.defaults.headers.common[
-        "Authorization"
-      ] = `Bearer ${response.data.token}`;
+      // axios.defaults.headers.common[
+      //   "Authorization"
+      // ] = `Bearer ${response.data.token}`;
       // console.log(response.data);
+      setAuthTok(response.data.token);
+      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -22,10 +26,11 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
   try {
     const response = await axios.post("/users/login", user);
-    axios.defaults.headers.common[
-      "Authorization"
-    ] = `Bearer ${response.data.token}`;
+    // axios.defaults.headers.common[
+    //   "Authorization"
+    // ] = `Bearer ${response.data.token}`;
     // console.log(response.data);
+    setAuthTok(response.data.token);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
