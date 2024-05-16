@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { setAuthTok } from "../auth/operations";
+// import { setAuthTok } from "../auth/operations";
 axios.defaults.baseURL = "https://connections-api.herokuapp.com";
 // const setAuthTok = (token) => {
 //   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -13,7 +13,7 @@ export const fetchContacts = createAsyncThunk(
       // axios.defaults.headers.common[
       //   "Authorization"
       // ] = `Bearer ${response.data.token}`;
-      setAuthTok(response.data.token);
+      // setAuthTok(response.data.token);
       console.log(response.data);
       return response.data;
     } catch (error) {
@@ -31,7 +31,7 @@ export const addContact = createAsyncThunk(
       //   "Authorization"
       // ] = `Bearer ${response.data.token}`;
       console.log(response.data.token);
-      setAuthTok(response.data.token);
+      // setAuthTok(response.data.token);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -47,7 +47,7 @@ export const deleteContact = createAsyncThunk(
       // axios.defaults.headers.common[
       //   "Authorization"
       // ] = `Bearer ${response.data.token}`;
-      setAuthTok(response.data.token);
+      // setAuthTok(response.data.token);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
