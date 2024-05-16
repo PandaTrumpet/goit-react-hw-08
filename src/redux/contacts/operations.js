@@ -30,6 +30,7 @@ export const addContact = createAsyncThunk(
       // axios.defaults.headers.common[
       //   "Authorization"
       // ] = `Bearer ${response.data.token}`;
+      console.log(response.data.token);
       setAuthTok(response.data.token);
       return response.data;
     } catch (error) {
