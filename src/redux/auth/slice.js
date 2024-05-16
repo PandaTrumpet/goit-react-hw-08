@@ -41,6 +41,9 @@ export const slice = createSlice({
         state.loading = false;
         state.error = true;
       })
+      .addCase(logout.pending, (state, action) => {
+        state.loading = true;
+      })
       .addCase(logout.fulfilled, (state) => {
         state.user = {
           name: "",
@@ -48,6 +51,9 @@ export const slice = createSlice({
         };
         state.token = null;
         state.isLoggedIn = false;
+      })
+      .addCase(logout.rejected, (state, action) => {
+        state.error = true;
       }),
 });
 
