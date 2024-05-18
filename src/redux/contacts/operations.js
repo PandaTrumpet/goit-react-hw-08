@@ -14,7 +14,7 @@ export const fetchContacts = createAsyncThunk(
       //   "Authorization"
       // ] = `Bearer ${response.data.token}`;
       // setAuthTok(response.data.token);
-      console.log(response.data);
+      // console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -30,7 +30,7 @@ export const addContact = createAsyncThunk(
       // axios.defaults.headers.common[
       //   "Authorization"
       // ] = `Bearer ${response.data.token}`;
-      console.log(response.data.token);
+      // console.log(response.data.token);
       // setAuthTok(response.data.token);
       return response.data;
     } catch (error) {
