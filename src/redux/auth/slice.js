@@ -41,7 +41,7 @@ export const slice = createSlice({
         state.loading = false;
         state.error = true;
       })
-      .addCase(logout.pending, (state, action) => {
+      .addCase(logout.pending, (state) => {
         state.loading = true;
       })
       .addCase(logout.fulfilled, (state) => {
@@ -52,7 +52,7 @@ export const slice = createSlice({
         state.token = null;
         state.isLoggedIn = false;
       })
-      .addCase(logout.rejected, (state, action) => {
+      .addCase(logout.rejected, (state) => {
         state.error = true;
       })
       .addCase(refreshUser.pending, (state) => {
