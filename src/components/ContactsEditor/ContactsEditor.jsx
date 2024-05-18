@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import { addContact } from "../../redux/contacts/operations";
+import css from './ContactEditor.module.css'
 import { useDispatch } from "react-redux";
 export default function ContactsEditor() {
   const dispatch = useDispatch();
@@ -18,16 +19,20 @@ export default function ContactsEditor() {
           number: "",
         }}
       >
-        <Form>
+        <Form className={css.mainForm}>
+          <div className={css.formContainer}>
           <label>
             Name
             <Field type="text" name="name" />
-          </label>
+            </label>
+          </div>
+          <div className={css.formContainer}>
           <label>
             Number
             <Field type="phone" name="number" />
-          </label>
-          <button type="submit">Add contact</button>
+            </label>
+            </div>
+          <button type="submit" className={css.btnContact}>Add contact</button>
         </Form>
       </Formik>
     </>

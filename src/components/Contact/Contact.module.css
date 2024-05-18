@@ -1,0 +1,20 @@
+.contactItemContainer {
+    display: flex;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px 4px;
+}
+
+.nameContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.numberContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
