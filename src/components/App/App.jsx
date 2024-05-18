@@ -11,9 +11,7 @@ const LoginPage = lazy(() => import("../../page/LoginPage/LoginPage"));
 const RegistrationPage = lazy(() =>
   import("../../page/RegistrationPage/RegistrationPage")
 );
-{
-  /* <RegistrationPage /> */
-}
+import PrivateRoute from "../PrivateRoute";
 function App() {
   const isRefreshing = useSelector(selectIsRefreshing);
   const dispatch = useDispatch();
@@ -29,14 +27,32 @@ function App() {
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/contacts" element={<ContactsPage />} />
+              <Route
+                path="/contacts"
+                element={
+                  <PrivateRoute
+                    component={<ContactsPage />}
+                    redirectTo="/login"
+                  />
+                }
+              />
               <Route
                 path="/login"
-                element={<RestrictedRoute component={<LoginPage />} />}
+                element={
+                  <RestrictedRoute
+                    component={<LoginPage />}
+                    redirectTo="/contacts"
+                  />
+                }
               />
               <Route
                 path="/register"
-                element={<RestrictedRoute component={<RegistrationPage />} />}
+                element={
+                  <RestrictedRoute
+                    component={<RegistrationPage />}
+                    redirectTo="/"
+                  />
+                }
               />
             </Routes>
           </Suspense>
