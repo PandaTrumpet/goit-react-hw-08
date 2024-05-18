@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addContact, deleteContact, fetchContacts } from "./operations";
-import { findContact } from "../filters/slice";
+// import { findContact } from "../filters/slice";
 
 const slice = createSlice({
   name: "contacts",
@@ -41,8 +41,7 @@ const slice = createSlice({
       })
       .addCase(deleteContact.rejected, (state, action) => {
         state.error = true;
-      })
-      .addCase(findContact.fulfilled, (state, action) => {}),
+      }),
 });
 
 export default slice.reducer;
