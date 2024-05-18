@@ -10,19 +10,6 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-<<<<<<< Updated upstream
-} from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
-
-
-const persistConfig = {
-  key: 'auth',
-  
-  storage,
-  whitelist:['token']
-}
-const persistedReducer = persistReducer(persistConfig, authreducer)
-=======
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
@@ -33,7 +20,6 @@ const persistConfig = {
 };
 const persistedReducer = persistReducer(persistConfig, authreducer);
 
->>>>>>> Stashed changes
 export const store = configureStore({
   reducer: {
     contacts: contactReducer,
@@ -47,8 +33,4 @@ export const store = configureStore({
     }),
 });
 
-<<<<<<< Updated upstream
-export const  persistor = persistStore(store)
-=======
 export const persistor = persistStore(store);
->>>>>>> Stashed changes
