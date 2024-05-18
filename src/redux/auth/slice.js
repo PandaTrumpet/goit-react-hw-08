@@ -54,14 +54,24 @@ export const slice = createSlice({
       })
       .addCase(logout.rejected, (state, action) => {
         state.error = true;
+<<<<<<< Updated upstream
       }).addCase(refreshUser.pending, (state, action) => {
         state.isRefreshing = true
+=======
+      })
+      .addCase(refreshUser.pending, (state) => {
+        state.isRefreshing = true;
+>>>>>>> Stashed changes
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
         state.user = action.payload;
         state.isLoggedIn = true;
         state.isRefreshing = false;
+<<<<<<< Updated upstream
       })
+=======
+      }),
+>>>>>>> Stashed changes
 });
 
 export default slice.reducer;
