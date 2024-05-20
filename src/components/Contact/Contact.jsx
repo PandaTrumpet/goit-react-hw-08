@@ -25,7 +25,7 @@ export default function Contact({ contact }) {
           className={css.btnContact}
           onClick={() => dispatch(deleteContact(contact.id))}
           color="primary"
-          size="large"
+          size="medium"
         >
           Delete contact
         </Button>
