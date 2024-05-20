@@ -1,17 +1,7 @@
 .btnReg {
   width: 150px;
-  margin-left: 15px;
-  background-color: rgb(93, 93, 236);
-  border-radius: 40px;
-  border: none;
-  padding: 6px;
-  transition: background-color 250ms ease-in-out;
-  cursor: pointer;
 }
 
-.btnReg:hover {
-  background-color: rgb(104, 104, 230);
-}
 .regTitle {
   margin-bottom: 20px;
 }

@@ -1,6 +1,7 @@
 import { Formik, Field, Form } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import Button from "@mui/material/Button";
 import css from "./RegistrationForm.module.css";
 export default function RegistrationForm() {
   const dispatch = useDispatch();
@@ -33,9 +34,9 @@ export default function RegistrationForm() {
             Password
             <Field type="password" name="password" className={css.input} />
           </label>
-          <button type="submit" className={css.btnReg}>
+          <Button variant="contained" type="submit" className={css.btnReg}>
             Register
-          </button>
+          </Button>
         </Form>
       </Formik>
     </>
