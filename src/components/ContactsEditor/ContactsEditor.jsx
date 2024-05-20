@@ -2,7 +2,9 @@ import { Formik, Form, Field } from "formik";
 import { addContact } from "../../redux/contacts/operations";
 import css from "./ContactEditor.module.css";
 import { useDispatch } from "react-redux";
+
 export default function ContactsEditor() {
+  
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
@@ -21,13 +23,13 @@ export default function ContactsEditor() {
       >
         <Form className={css.mainForm}>
           <div className={css.formContainer}>
-            <label>
+            <label  className={css.inputForm}>
               Name
               <Field type="text" name="name" />
             </label>
           </div>
           <div className={css.formContainer}>
-            <label>
+            <label className={css.inputForm}>
               Number
               <Field type="phone" name="number" />
             </label>

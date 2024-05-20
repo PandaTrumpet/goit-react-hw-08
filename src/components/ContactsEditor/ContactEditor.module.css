@@ -1,0 +1,25 @@
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    border: 1px solid black;
+    padding: 20px 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnContact {
+    max-width: 108px;
+    margin: 0 auto;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+}

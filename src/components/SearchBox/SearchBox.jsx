@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-// import css from "./SearchBox.module.css";
+import css from "./SearchBox.module.css";
 import { selectSearchContact } from "../../redux/filters/selectors";
 import { findContact } from "../../redux/filters/slice";
 export default function SearchBox() {
@@ -10,11 +10,13 @@ export default function SearchBox() {
   };
   return (
     <div>
+      <p>Find contact</p>
       <input
         type="text"
         name="searchContact"
         value={textFilter}
         onChange={handleChange}
+        className={ css.searchForm}
       />
     </div>
   );
