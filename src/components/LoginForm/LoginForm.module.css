@@ -1,20 +1,8 @@
-.mainForm {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 300px;
-  border: 1px solid black;
-  padding: 20px 10px;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.loginTitle {
+  margin-bottom: 20px;
 }
 
-.formContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.btnContact {
+.btnLogin {
   width: 150px;
   margin-left: 15px;
   background-color: rgb(93, 93, 236);
@@ -25,10 +13,18 @@
   cursor: pointer;
   margin-top: 10px;
 }
-.btnContact:hover {
+.btnLogin:hover {
   background-color: rgb(104, 104, 230);
 }
-.inputForm {
+.mainForm {
   display: flex;
   flex-direction: column;
+}
+.loginLabel {
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  width: 300px;
+  margin-top: 10px;
 }

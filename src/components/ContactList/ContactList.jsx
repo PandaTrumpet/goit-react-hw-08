@@ -12,7 +12,7 @@ export default function ContactList() {
         {contacts.length > 0 &&
           contacts.map((contact) => {
             return (
-              <li key={contact.id}>
+              <li key={contact.id} className={css.contactList}>
                 <Contact contact={contact} />
               </li>
             );

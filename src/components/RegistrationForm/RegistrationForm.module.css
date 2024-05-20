@@ -1,4 +1,4 @@
-.button {
+.btnReg {
   width: 150px;
   margin-left: 15px;
   background-color: rgb(93, 93, 236);
@@ -8,12 +8,23 @@
   transition: background-color 250ms ease-in-out;
   cursor: pointer;
 }
-.button:hover {
+
+.btnReg:hover {
   background-color: rgb(104, 104, 230);
 }
-.userMenu {
+.regTitle {
+  margin-bottom: 20px;
+}
+.mainForm {
   display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  margin-top: 10px;
+  width: 300px;
 }

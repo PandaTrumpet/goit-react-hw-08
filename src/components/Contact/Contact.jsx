@@ -16,7 +16,10 @@ export default function Contact({ contact }) {
           <BsFillTelephoneFill />
           <p>{contact.number}</p>
         </div>
-        <button onClick={() => dispatch(deleteContact(contact.id))}>
+        <button
+          className={css.btnContact}
+          onClick={() => dispatch(deleteContact(contact.id))}
+        >
           Delete contact
         </button>
       </div>
