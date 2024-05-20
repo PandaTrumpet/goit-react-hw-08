@@ -10,7 +10,7 @@ export default function UserMenu() {
   const user = useSelector(selectUser);
   return (
     <div className={ css.userMenu}>
-      <p>Welcome,{user.name}</p>
+      <p>Welcome, {user.name}</p>
       <button onClick={handleClickc} className={ css.button}>Log out</button>
     </div>
   );
