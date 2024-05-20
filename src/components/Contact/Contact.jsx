@@ -22,6 +22,9 @@ export default function Contact({ contact }) {
       },
     });
   };
+  const toggleEditor = () => {
+    setEditor((prevEditor) => !prevEditor);
+  };
   return (
     <div className={css.contactItemContainer}>
       <div>
@@ -44,7 +47,7 @@ export default function Contact({ contact }) {
           Delete contact
         </Button>
         <Button
-          onClick={() => setEditor(true)}
+          onClick={toggleEditor}
           variant="outlined"
           className={css.changeBtn}
         >
