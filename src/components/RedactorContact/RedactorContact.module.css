@@ -1,0 +1,12 @@
+.mainForm {
+  display: flex;
+  flex-direction: column;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.btn {
+  margin-top: 10px;
+}
