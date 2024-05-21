@@ -6,7 +6,7 @@ import {
   fetchContacts,
 } from "./operations";
 // import { findContact } from "../filters/slice";
-
+import { logout } from "../auth/operations";
 const slice = createSlice({
   name: "contacts",
   initialState: {
@@ -51,6 +51,11 @@ const slice = createSlice({
         state.items = state.items.map((contact) =>
           contact.id === action.payload.id ? action.payload : contact
         );
+      })
+      .addCase(logout.fulfilled, (state) => {
+        state.items = [];
+        state.loading = false;
+        state.error = null;
       }),
 });
 
