@@ -17,9 +17,9 @@ import PrivateRoute from "../PrivateRoute";
 function App() {
   const isRefreshing = useSelector(selectIsRefreshing);
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(refreshUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
   return (
     <div>
       {isRefreshing ? (
